@@ -1,0 +1,2 @@
+# go-knapsackcrypto
+Knapsack cryptosystems
