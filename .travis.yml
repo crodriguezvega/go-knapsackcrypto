@@ -3,4 +3,5 @@ go:
  - 1.15.x
 
 script:
- - go get github.com/leanovate/gopter && go test -v ./...
+ - go get github.com/leanovate/gopter
+ - go test -v ./...
