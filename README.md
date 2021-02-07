@@ -1,5 +1,4 @@
 # go-knapsackcrypto
-Knapsack cryptosystems
 
 [![Build Status](https://travis-ci.org/crodriguezvega/go-knapsackcrypto.svg?branch=master)](https://travis-ci.org/github/crodriguezvega/go-knapsackcrypto)
 
