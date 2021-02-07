@@ -10,7 +10,7 @@ Implementation of knapsack crypto systems in Go.
 
 References:
 - Chapter 6 of "An Introductio  to Mathematical Cryptography" by Jeffrey Hoffstein, Jill Pipher and J.H Silverman.
-- Chapter 8 of "Handbook of Applied Cryptography" by Alfred J. Menezes et al.
+- [Chapter 8](http://cacr.uwaterloo.ca/hac/about/chap8.pdf) of "Handbook of Applied Cryptography" by Alfred J. Menezes et al.
 
 Remarks:
 - Decryption will produce a bit slice of the same length as the super imcreasing sequence of the private key. But the actual bit length of the encrypted plaintext message could be smaller. Therefore to correctly extract the plaintext message I make use of the fact that I know the byte length of the original message. I guess in real-life situations you would encrypt together with the plaintext message some code that allows the decrypting party to know how long the message actually is.
