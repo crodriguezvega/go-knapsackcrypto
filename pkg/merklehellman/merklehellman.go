@@ -74,6 +74,8 @@ func (pubKey *PublicKey) Encrypt(p []byte) (c *big.Int, err error) {
 }
 
 // Decrypts the ciphertext message c.
+// This function reports an error if the conversion of
+// the decrypted bits slice to bytes fails.
 func (privKey *PrivateKey) Decrypt(c *big.Int) (p []byte, err error) {
 	s := big.NewInt(0)
 	mul := big.NewInt(0)

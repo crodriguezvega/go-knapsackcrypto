@@ -6,7 +6,7 @@ import (
 	"math"
 )
 
-// Converts a bytes to bits
+// Converts bytes to bits
 func Bits(bytes []byte) (bits []byte) {
 	bits = make([]byte, len(bytes)*8)
 	for i, oneByte := range bytes {
@@ -17,7 +17,9 @@ func Bits(bytes []byte) (bits []byte) {
 	return bits
 }
 
-// Converts a bits to bytes
+// Converts bits to bytes.
+// This function reports an error if an error is reported
+// whlie slicing the bits slice input.
 func Bytes(bits []byte) (bytes []byte, err error) {
 	slices, err := slicesOf(bits, 8)
 	if err != nil {
@@ -36,7 +38,9 @@ func Bytes(bits []byte) (bytes []byte, err error) {
 	return bytes, nil
 }
 
-// Splits input in slices of length
+// Splits input in slices of length.
+// This function reports an error if the length parameter is less
+// than one or smaller than the length of the input slice.
 func slicesOf(input []byte, length int) (output [][]byte, err error) {
 	inputLen := len(input)
 	if length < 1 {
