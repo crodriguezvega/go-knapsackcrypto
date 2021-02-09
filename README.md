@@ -9,7 +9,7 @@ Implementation of knapsack crypto systems in Go.
 ### Basic Merkle-Hellman knapsack public-key encryption
 
 References:
-- Chapter 6 of "An Introductio  to Mathematical Cryptography" by Jeffrey Hoffstein, Jill Pipher and J.H Silverman.
+- Chapter 6 of "An Introduction to Mathematical Cryptography" by Jeffrey Hoffstein, Jill Pipher and J.H Silverman.
 - [Chapter 8](http://cacr.uwaterloo.ca/hac/about/chap8.pdf) of "Handbook of Applied Cryptography" by Alfred J. Menezes et al.
 
 Remarks:
