@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	privKey, pubKey, err := merklehellman.GenerateKeys(10000)
+	privKey, pubKey, err := merklehellman.GenerateKeys(10000, 5)
 	if err != nil {
 		log.Fatalln(err)
 	}

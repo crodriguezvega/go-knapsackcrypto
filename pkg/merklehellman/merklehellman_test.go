@@ -17,16 +17,17 @@ func Test(t *testing.T) {
 	properties := gopter.NewProperties(parameters)
 
 	properties.Property("Encryption and decryption", prop.ForAll(
-		func(p []byte) bool {
+		func(p []byte, iterations int) bool {
 			byteSize := uint(math.Ceil(math.Pow(float64(len(p)*8), 2) / 4))
 
-			privKey, pubKey, err := GenerateKeys(byteSize)
+			privKey, pubKey, err := GenerateKeys(byteSize, 1)
 			c, err := pubKey.Encrypt(p)
 			m, err := privKey.Decrypt(c)
 
 			return err == nil && reflect.DeepEqual(p, m[:len(p)])
 		},
 		gen.SliceOf(gen.UInt8Range(0, 255), reflect.TypeOf(byte(0))),
+		gen.IntRange(1, math.MaxUint8/8),
 	))
 
 	properties.TestingRun(t)

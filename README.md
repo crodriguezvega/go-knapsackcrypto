@@ -4,9 +4,13 @@
 
 Implementation of knapsack crypto systems in Go.
 
+Run the test: `go test -v ./...`
+
 ## Schemes
 
-### Basic Merkle-Hellman knapsack public-key encryption
+### Basic & Multiple-iterated Merkle-Hellman knapsack public-key encryption
+
+Basic is single-iterated, so `iterations` is `1`. For multiple-iterated, choose `iterations` greater than `1`.
 
 References:
 - Chapter 6 of "An Introduction to Mathematical Cryptography" by Jeffrey Hoffstein, Jill Pipher and J.H Silverman.
@@ -19,10 +23,6 @@ Remarks:
 Example:
 
 `go run examples/merklehellman/main.go`
-
-### Multiple-iterated Merkle-Hellman knapsack encryption
-
-TODO
 
 ### Chor-Rivest knapsack public-key encryption
 
