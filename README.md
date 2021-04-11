@@ -4,7 +4,7 @@
 
 Implementation of knapsack crypto systems in Go.
 
-Run the test: `go test -v ./...`
+Run the tests: `go test -v ./...`
 
 ## Schemes
 
